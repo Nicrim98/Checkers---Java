@@ -1,4 +1,4 @@
-public class Main {
+public class Game {
 
     public static void main(String[] args) {
         System.out.println(" Sprawdzam czy zadziała system z dzieleniem projektu XD");
