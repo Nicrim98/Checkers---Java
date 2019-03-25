@@ -6,6 +6,12 @@ public class Piece { // pomysł na zrobienie wstepnie szkieletu figury, jak w pr
     //asdada
     //das
 
+
+
+    boolean czy_zjesc;
+
+
+
     int test3 = 5;
     int ert=0;
 
