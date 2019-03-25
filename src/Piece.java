@@ -6,4 +6,10 @@ public class Piece { // pomysł na zrobienie wstepnie szkieletu figury, jak w pr
     //asdada
     //das
 
+
+
+    boolean czy_zjesc;
+
+
+
 }
