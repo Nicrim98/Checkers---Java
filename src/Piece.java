@@ -7,5 +7,6 @@ public class Piece { // pomysł na zrobienie wstepnie szkieletu figury, jak w pr
     //das
 
     int test3 = 5;
+    int ert=0;
 
 }
