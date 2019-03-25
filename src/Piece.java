@@ -4,6 +4,6 @@ public class Piece { // pomysł na zrobienie wstepnie szkieletu figury, jak w pr
 
     ///dasdasd
     //asdada
-    //dasda
+    //das
 
 }
