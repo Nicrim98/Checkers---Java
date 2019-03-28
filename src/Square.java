@@ -1,4 +1,4 @@
-public class Square { // definicja pojedynczego kafelka, będzie potrzeba np. do sprawdzania czy figura stacjonuje na danym polu ;)
+public abstract class Square { // definicja pojedynczego kafelka, będzie potrzeba np. do sprawdzania czy figura stacjonuje na danym polu ;)
 
     private int column;
     private int row;
@@ -18,4 +18,8 @@ public class Square { // definicja pojedynczego kafelka, będzie potrzeba np. do
         squareString = list_of_columns[column] + " " + list_of_rows[row];
         return squareString;
     }
+
+    public abstract Piece getPiece(); // coś takiego gość proponuje z filmika na Youtube
+                                        // jakby ogarnąć te klasy abstract i tak dalej
+                                        // to mógłby to być fajny materiał do demonstracji
 }
