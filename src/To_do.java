@@ -6,4 +6,8 @@ public class To_do {
     // No i taka ostatnia uwaga to taka, że mamy mało czasu już teraz, bo samego kodowania wychodzi
     // 2 tygodnie czasu, także proponuje starać się codziennie coś dopisywać, albo pomysły dawać i jakoś
     // się nam uda ! :D
+
+
+
+
 }

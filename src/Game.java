@@ -12,8 +12,11 @@ public class Game {
 
         for (int column = 0; column < 8; column++) { // sprawdzenie poprawności wyświetlania szachownicy
             for (int row = 0; row < 8; row++) {
-                System.out.println(board.getSquare(column,row));
-            }
+                System.out.print(board.getSquare(column,row)); /// pozmienialem zeby wywietlalo sie jako macierz 8x8 a
+            }                                                   /// a nie lista
+
+            System.out.println();
+
         }
     }
 }
