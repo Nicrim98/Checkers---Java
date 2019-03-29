@@ -16,7 +16,10 @@ public abstract class Square { // definicja pojedynczego kafelka, będzie potrze
         String[] list_of_columns = { "A", "B", "C", "D", "E", "F", "G", "H"};
 
         squareString = list_of_columns[column] + " " + list_of_rows[row];
-        return squareString;
+        return squareString ;
+
+
+
     }
 
     public abstract Piece getPiece(); // coś takiego gość proponuje z filmika na Youtube
