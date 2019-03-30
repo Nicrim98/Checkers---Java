@@ -10,13 +10,11 @@ public class Game {
 
         Board board = new Board(color);
 
-        for (int column = 0; column < 8; column++) { // sprawdzenie poprawności wyświetlania szachownicy
-            for (int row = 0; row < 8; row++) {
-                System.out.print(board.getSquare(column,row)); /// pozmienialem zeby wywietlalo sie jako macierz 8x8 a
-            }                                                   /// a nie lista
-
-            System.out.println();
-
+        for (int row = 0; row < 8; row++) { // sprawdzenie poprawności wyświetlania szachownicy
+            for (int column = 0; column < 8; column++) {
+                System.out.print(board.getSquare(column,row));
+            }
+             System.out.println();
         }
     }
 }

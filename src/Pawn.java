@@ -2,10 +2,12 @@ public class Pawn extends Piece {
 
     private int column;
     private int row;
+    private int color=1;
 
-    public Pawn(int column, int row) {
+    public Pawn(int column, int row, int color) {
         this.column = column;
         this.row = row;
+        this.color = color;
     }
 // ogolnie pomysl mam taki ze kierujemy do funcki obecna kolumne i wiersz
     // podajemy tez na jaka chce sie ruszyc i sprawdzamy czy moze
@@ -13,7 +15,8 @@ public class Pawn extends Piece {
 
     // to jest algorytm dla tych pionkow ponizej
 
-    private int color=1; // bedziemy go inicjowac
+    ///// można chyba będzie uproscić ten algorytm, ponieważ pionek jak jest inicjalizowany to od razu wiadomo
+    ///// na jakim jest miejscu, no bo jest przyporządkowny więc by było curr_row = row (powyżej)
 
     private int curr_row=1;
     private int curr_column=1;
