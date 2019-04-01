@@ -1,15 +1,25 @@
 public class Rook extends Piece {
 
-    private int color=1; // bedziemy go inicjowac
+        // nie wiem czy będzie potrzebne, ale na razie zostawiam
 
-    private int curr_row=1;
-    private int curr_column=1;
+    private Board board;
+    private int curr_column;
+    private int curr_row;
+    private int wanted_column;
+    private int wanted_row;
+    private int color;
 
-    private int wanted_row=2;
-    private int wanted_column=1;
+    public Rook(int curr_column, int curr_row, int color) {
+        this.curr_column = curr_column;
+        this.curr_row = curr_row;
+        this.color = color;
+    }
 
-    public boolean may_i_move(){
-
+    // sprawdzanie poprawności ruchu,
+    public boolean may_i_move(Board board, int wanted_column, int wanted_row){
+        this.board = board;
+        this.wanted_column = wanted_column;
+        this.wanted_row = wanted_row;
         if(wanted_column == curr_column ){
             return true;
         }
@@ -17,8 +27,16 @@ public class Rook extends Piece {
             return true;
         }
         else return false;
-
-
     }
 
+    // wykonanie ruchu po wcześniejszym sprawdzeniu may_i_move
+    public void move(int curr_column, int curr_row, int wanted_column, int wanted_row){
+        if(may_i_move(board,wanted_column,wanted_row)) {
+            /*board.getSquare(curr_column, curr_row) = new Square("-");
+            board.getSquare(wanted_column, wanted_row) = new Square("R");*/
+            // zastanawiam się czemu to wyżej nie działa XD
+        } else{
+            // throw exception pasuje tu dopisać
+        }
+    }
 }

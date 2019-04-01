@@ -9,4 +9,7 @@ public class Updates {
     // a dla komputera to będą wiersze odpowiednio 1 => 7, 2 => 6, 3 => 5
     // trzeba by ogarnąć jakąś podmiane tego co gracz będzie wpisywał, a co komputer będzie dostawał do zmian
 
+    // pasuje dorzucić te warunki do metod may_i_move żeby figury nie mogły przeskakiwać innych tylko bić albo
+    // ruszyć się maksymalnie jedno pole mniej gdyż figury tego samego koloru
+
 }
