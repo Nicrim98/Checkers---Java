@@ -11,5 +11,9 @@ public class Updates {
 
     // pasuje dorzucić te warunki do metod may_i_move żeby figury nie mogły przeskakiwać innych tylko bić albo
     // ruszyć się maksymalnie jedno pole mniej gdyż figury tego samego koloru
+    // chciałem ruszyć klasę Rook i zrobić metodę move(), która zmieni pozycje figury na planszy
+    // generalnie tam jakiś błąd wysskakuje ale chyba pomysł jest całkiem ok
+    // brakuje mi operacji na figurach jako obiektach, muszę pomyśleć na tym jeszcze, ewentualne pomysły
+    // mile widziane :D
 
 }
