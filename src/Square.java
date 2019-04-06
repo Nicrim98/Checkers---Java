@@ -13,23 +13,17 @@ public class Square { // definicja pojedynczego kafelka, będzie potrzeba np. do
 
     public Square(String piece_type){
         this.piece_type = piece_type;
-        if (piece_type.equals("P")){
+        if (piece_type.equals("W")){   // white pawn
             what_square = 1;
         }
-        if (piece_type.equals("R")){
+        if (piece_type.equals("B")){   // black pawn
             what_square = 2;
         }
-        if (piece_type.equals("N")){
+        if (piece_type.equals("WQ")){   // white queen
             what_square = 3;
         }
-        if (piece_type.equals("B")){
+        if (piece_type.equals("BQ")){   // black queen
             what_square = 4;
-        }
-        if (piece_type.equals("K")){
-            what_square = 5;
-        }
-        if(piece_type.equals("Q")){
-            what_square = 6;
         }
     }
 
@@ -50,7 +44,7 @@ public class Square { // definicja pojedynczego kafelka, będzie potrzeba np. do
 
         String squareString;
 
-        String[] list_of_possible_squares = { "-", "P", "R", "N", "B", "K", "Q"};
+        String[] list_of_possible_squares = { "-", "W", "B", "WQ", "BQ"};
 
         squareString = list_of_possible_squares[what_square] + " ";
         return squareString ;
