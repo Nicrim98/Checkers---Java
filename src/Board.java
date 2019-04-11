@@ -3,8 +3,8 @@ import java.util.List;
 
 public class Board { // utworzenie planszy do gry, z polami
 
-    private static final int width = 8;
-    private static final int height = 8;
+    private final int width = 8;
+    private final int height = 8;
 
     private Square[][] squares = new Square[width][height];
 
@@ -52,5 +52,12 @@ public class Board { // utworzenie planszy do gry, z polami
         return squares[column][row];
     }
 
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
 }
 

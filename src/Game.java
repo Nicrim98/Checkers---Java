@@ -10,8 +10,8 @@ public class Game {
 
         Board board = new Board();
 
-        for (int row = 0; row < 8; row++) { // sprawdzenie poprawności wyświetlania szachownicy
-            for (int column = 0; column < 8; column++) {
+        for (int row = 0; row < board.getHeight(); row++) { // sprawdzenie poprawności wyświetlania szachownicy
+            for (int column = 0; column < board.getWidth(); column++) {
                 System.out.print(board.getSquare(column,row));
             }
              System.out.println();

@@ -50,6 +50,10 @@ public class Square { // definicja pojedynczego kafelka, będzie potrzeba np. do
         return squareString ;
 
     }
+
+   // public Piece setPiece(Piece type_of_piece, int column, int row){
+   //     return
+    //}
     //public Piece getPiece(); // coś takiego gość proponuje z filmika na Youtube
                                         // jakby ogarnąć te klasy abstract i tak dalej
                                         // to mógłby to być fajny materiał do demonstracji
