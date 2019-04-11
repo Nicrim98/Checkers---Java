@@ -13,22 +13,22 @@ public class Pawn extends Piece { // to była klasa bishop, zostawiłem ją bo w
 
     public boolean may_i_move(){ // bishop metoda + metoda na zbicia
 
-        for(int i=1; i<8; i++){ // tu ta 8 sprawi w pewnych przypadkach out of border naszej szachownicy wiec trzea to zedytowac potem
-            if(wanted_column == curr_column + i && wanted_row == curr_row + i){
+     ///   for(int i=1; i<8; i++){ // tu ta 8 sprawi w pewnych przypadkach out of border naszej szachownicy wiec trzea to zedytowac potem
+            if(wanted_column == curr_column + 1 && wanted_row == curr_row + 1){
                 return true;
               //  break;
             }
-            if(wanted_column == curr_column + i && wanted_row == curr_row - i){
+            if(wanted_column == curr_column + 1 && wanted_row == curr_row - 1){
                 return true;
                 //break;
             }
 
-            if(wanted_column == curr_column - i && wanted_row == curr_row - i){
+            if(wanted_column == curr_column - 1 && wanted_row == curr_row - 1){
                 return true;
               //  break;
             }
 
-            if(wanted_column == curr_column - i && wanted_row == curr_row + i){
+            if(wanted_column == curr_column - 1 && wanted_row == curr_row + 1 ){
                 return true;
               //  break;
             }
@@ -36,11 +36,6 @@ public class Pawn extends Piece { // to była klasa bishop, zostawiłem ją bo w
 
             else return false;
         //    break;
-
-        }
-
-
-        return false;
 
     }
 
