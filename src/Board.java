@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 public class Board { // utworzenie planszy do gry, z polami
 
@@ -12,7 +11,7 @@ public class Board { // utworzenie planszy do gry, z polami
     private ArrayList<Piece> pieces = new ArrayList<Piece>(); // Jak na razie jedyna arraylista
 
     private final int white = 1;
-    private final int black = 1;
+    private final int black = 2;
 
     public Board() {    // utworzenie planszy szachowej, ustawienie początkowe
 
@@ -46,13 +45,13 @@ public class Board { // utworzenie planszy do gry, z polami
             for(int column = 1; column < width; column += 2) {
                 if (row % 2 == 1) {
                     this.squares[column-1][row] = new Square("B");
-                    pieces.add(new Pawn(column, row, white));
+                    pieces.add(new Pawn(column, row, black));
                     Collections.swap(pieces, (row*8)+(column-1), 64);
                     pieces.remove(64);
                 }
                 else {
                     this.squares[column][row] = new Square("B");
-                    pieces.add(new Pawn(column, row, white));
+                    pieces.add(new Pawn(column, row, black));
                     Collections.swap(pieces, (row*8)+column, 64);
                     pieces.remove(64);
                 }
@@ -74,6 +73,9 @@ public class Board { // utworzenie planszy do gry, z polami
 
     public ArrayList<Piece> getPieces() {
         return pieces;
+    }
+    public Piece getPieces(int number_of_pieces) {  // ta metoda nie potrzebna moim zdaniem, tylko chciałem ciąg arraylisty wrzucic na 8x8 zeby sprawdzic poprawnosc
+        return pieces.get(number_of_pieces);
     }
 }
 

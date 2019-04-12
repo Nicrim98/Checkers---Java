@@ -16,6 +16,15 @@ public class Game {
             }
              System.out.println();
         }
+        System.out.println();   // odtad w dół psrawdzam poprawne wyswietlenie pionków w arrayliscie
         System.out.println(board.getPieces());
+        System.out.println();
+
+        for (int row = 0; row < board.getHeight(); row++) { // sprawdzenie poprawności wyświetlania szachownicy
+            for (int column = 0; column < board.getWidth(); column++) {
+                System.out.print(board.getPieces((row*8) + column) + " ");
+            }
+            System.out.println();
+        }
     }
 }
