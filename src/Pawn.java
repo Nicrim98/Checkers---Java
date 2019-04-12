@@ -2,6 +2,12 @@ public class Pawn extends Piece { // to była klasa bishop, zostawiłem ją bo w
                                     // chodzą podobnie jak bishop w szachach
 
 
+    public Pawn(int curr_column, int curr_row, int color) {
+        this.color = color;
+        this.curr_row = curr_row;
+        this.curr_column = curr_column;
+    }
+
     private int color=1; // bedziemy go inicjowac
 
     private int curr_row=1;
