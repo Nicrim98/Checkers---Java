@@ -5,6 +5,8 @@ public class Square { // definicja pojedynczego kafelka, będzie potrzeba np. do
     private String piece_type;
     private int what_square = 0;
 
+    private Piece piece;
+
     public Square(int column, int row) {
         this.column = column;
         this.row = row;
@@ -27,18 +29,38 @@ public class Square { // definicja pojedynczego kafelka, będzie potrzeba np. do
         }
     }
 
+    // Getter Pionka z danego square'a
+    public Piece getPiece(){
+        return piece;
+    }
 
-/*    public String toString(){       // metoda z poprzednim pomysłem i wyświetlaniem pól
+    // Umieszczenie pionka na polu
+    public Piece putPiece(Piece p){
+        Piece previous = this.piece;
+        if( previous != null){
+            previous.removeSquare();
+        }
+        this.piece = p;
+        return previous;
+    }
 
-        String squareString;
+    // Usunięcie pionka z pola
+    public Piece removePiece(){
+        Piece previous = this.piece;
+        if( previous != null){
+            previous.removeSquare();
+        }
+        this.piece = null;
+        return previous;
+    }
 
-        String[] list_of_rows = { "1", "2", "3", "4", "5", "6", "7", "8"};
-        String[] list_of_columns = { "A", "B", "C", "D", "E", "F", "G", "H"};
+    public int getColumn(){
+        return column;
+    }
 
-        squareString = list_of_columns[column] + list_of_rows[row] + " ";
-        return squareString ;
-
-    }*/
+    public int getRow(){
+        return row;
+    }
 
     public String toString(){       // metoda z poprzedniego projektu pokerowego
 
@@ -51,10 +73,24 @@ public class Square { // definicja pojedynczego kafelka, będzie potrzeba np. do
 
     }
 
-   // public Piece setPiece(Piece type_of_piece, int column, int row){
-   //     return
-    //}
-    //public Piece getPiece(); // coś takiego gość proponuje z filmika na Youtube
-                                        // jakby ogarnąć te klasy abstract i tak dalej
-                                        // to mógłby to być fajny materiał do demonstracji
+
 }
+
+
+// public Piece setPiece(Piece type_of_piece, int column, int row){
+//     return
+//}
+//public Piece getPiece();
+
+
+/*    public String toString(){       // metoda z poprzednim pomysłem i wyświetlaniem pól
+
+        String squareString;
+
+        String[] list_of_rows = { "1", "2", "3", "4", "5", "6", "7", "8"};
+        String[] list_of_columns = { "A", "B", "C", "D", "E", "F", "G", "H"};
+
+        squareString = list_of_columns[column] + list_of_rows[row] + " ";
+        return squareString ;
+
+    }*/
