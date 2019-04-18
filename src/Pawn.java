@@ -6,6 +6,7 @@ public class Pawn extends Piece { // to była klasa bishop, zostawiłem ją bo w
     private Board board;
 
     private int color;
+    private int color_temp;
 
 
 
@@ -91,11 +92,16 @@ public class Pawn extends Piece { // to była klasa bishop, zostawiłem ją bo w
      public String toString() {
 
           String squareString;
-
+          if(color == 1){
+              color_temp = 1;
+          }
+          if(color == -1){
+              color_temp = 2;
+          }
 
           String[] list_of_pieces = {" ", "W", "B"};
 
-          squareString = list_of_pieces[color];
+          squareString = list_of_pieces[color_temp];
           return squareString;
 
      }

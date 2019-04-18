@@ -2,23 +2,19 @@ import java.util.Scanner;
 
 public class Game {
 
-    public static void main (){
+        private static final int white = 1;
+        private static final int black = -1;
+
+    public static void main(String[] args){
         Board board = new Board();
-        Player player1 = new Player("Marcin", 12, 1);
-        Player player2 = new Player("Kuba", 12, -1);
+        Player player1 = new Player("Marcin", 12, white);
+        Player player2 = new Player("Kuba", 12, black);
 
         Scanner sc = new Scanner(System.in);
-        Game game = new Game
+        Gameplay gameplay = new Gameplay();
 
-        while(!winner){
-            System.out.println(game);
-            int r1 = sc.nextInt();
-            int c1 = sc.nextInt();
-            int r2 = sc.nextInt();
-            int c2 = sc.nextInt();
+        gameplay.getBoard(board);
 
-
-        }
 
 
     }
