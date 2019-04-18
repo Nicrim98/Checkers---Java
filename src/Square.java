@@ -69,9 +69,10 @@ public class Square{ // definicja pojedynczego kafelka, będzie potrzeba np. do 
         if(piece == null){
             return "-";
         }
+        else
         return piece.toString();    // poprawiona metoda wyświetlania wzięta od Cecylii
-    }
-
+    }                               // choć jeszcze do końca nie działa, możesz sobie podpatrzeću Cecylii, że tam jeszcze są odwołania w figurze do rodzaju figury
+                                    // na razie nie wiem jeszcze jak to załatwić
 
     public Possition getPossition(){
         return possition;
