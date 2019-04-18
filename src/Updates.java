@@ -24,4 +24,9 @@ public class Updates {
     /// ten kod na sprawdzanie czy mozna ruch polega na tym ze sprawdzaja sb czy jest roznica rzedu o 1, czy jest inny kolor itd..
     /// musimy sie zastanowic czy dmyslimy nad listami czy przechodzimy na hash code.
     /// przepraszam ze tak malo ale staram sie ale pisalem straszne farmazony ktore nie dzialaly :(
+
+    // luzik arbuzik
+    // ciśniemy ten projekt
+    // zrobiłem zmianę na to_string w square, który w zasadzie powinien ściągać to_string z pionka po prostu :)
+
 }
