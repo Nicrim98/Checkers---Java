@@ -14,7 +14,8 @@ public class Game {
         Gameplay gameplay = new Gameplay();
 
         gameplay.getBoard(board);
-
+        gameplay.make_move();
+        gameplay.getBoard(board);
 
 
     }

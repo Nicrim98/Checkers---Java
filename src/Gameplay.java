@@ -1,5 +1,7 @@
 import javafx.geometry.Pos;
 
+import javax.swing.text.Position;
+
 public class Gameplay {
 
 //    private final Player player2;
@@ -24,10 +26,15 @@ public class Gameplay {
 //        this.player1 = new Player("player1", 12, white);
 //        this.player2 = new Player("player2", 12, black);
 
-
+    }
+    public void make_move() {
+        //r=2, c=7,     r=3,c=6
+        Possition p_from = new Possition(2,7);
+        Possition p_to = new Possition(3,6);
+        board.getSquare(p_to).putPiece(board.getSquare(p_from).getPiece());
+        board.getSquare(p_from).removePiece();
 
     }
-    
 //    public void make_move(Possition p_from, Possition p_to) {
 //        if(this.board.getSquare(p_from) == null || this.board.getSquare(p_from).getPiece() == null );
 //        if(this.board.getSquare(p_from).getPiece().getColor() != activeplayer) throw new WybranaFiguraZlegoGraczaException();
