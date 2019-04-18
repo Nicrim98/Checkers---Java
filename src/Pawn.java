@@ -3,12 +3,15 @@ public class Pawn extends Piece { // to była klasa bishop, zostawiłem ją bo w
 
     private Square square;
     private Square wanted_square;
+    private Board board;
 
     private int color;
 
-    public Pawn(Square square, int color) {
+    public Pawn(Board board,  Square square, int color) {
         this.color = color;
         this.square = square;
+        this.board = board;
+
     }
 
     //@Override // nadpisujemy klase may_i_move z piece
@@ -23,7 +26,13 @@ public class Pawn extends Piece { // to była klasa bishop, zostawiłem ją bo w
     public Move may_i_move(Square square) {
             if (square == null || square.equals(this.square)){
                 return null;
+
+
+
             }
+
+
+
 
 
 //        ///   for(int i=1; i<8; i++){ // tu ta 8 sprawi w pewnych przypadkach out of border naszej szachownicy wiec trzea to zedytowac potem
@@ -51,6 +60,32 @@ public class Pawn extends Piece { // to była klasa bishop, zostawiłem ją bo w
 //
         return null;
     }
+
+
+
+    public boolean can_move_freely(Square square){
+        Possition pozycja = this.square.getPossition();
+        if(pozycja.difference_rows(square.getPossition()) == square.getPiece().getColor() && Math.abs(pozycja.difference_columns(square.getPossition())) == 1){
+            return true;
+        }
+        return false;
+    }
+
+    public Square poleZbijane(Square squareto) throws NoPieceTojumpover {
+        Possition possition = this.square.getPossition();
+        for(int i = -1; i <= 1; i+=2){
+            for(int j = -1; j <=1; j+=2){
+                if(possition.difference_rows(squareto.getPossition()) == 2 * i && possition.difference_columns(squareto.getPossition())==2*j){
+                    Square poleZbijane = squareto.getPossition(new Possition(square.getRow() + i, square.getColumn() + j));
+                    if(poleZbijane.getFigura() == null) throw new BrakFiguryDoZbiciaException();
+                    if(poleZbijane.getFigura().getKolor() == this.getKolor().opposite()) return poleZbijane;
+                }
+            }
+        }
+        return null;
+    }
+
+
      public String toString() {
 
           String squareString;

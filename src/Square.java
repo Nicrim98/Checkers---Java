@@ -20,7 +20,7 @@ public class Square{ // definicja pojedynczego kafelka, będzie potrzeba np. do 
             what_square = 1;
         }
         if (piece_type.equals("B")){   // black pawn
-            what_square = 2;
+            what_square = -1;
         }
         if (piece_type.equals("WQ")){   // white queen
             what_square = 3;
@@ -29,6 +29,9 @@ public class Square{ // definicja pojedynczego kafelka, będzie potrzeba np. do 
             what_square = 4;
         }
     }
+
+
+
 
     // Getter Pionka z danego square'a
     public Piece getPiece(){

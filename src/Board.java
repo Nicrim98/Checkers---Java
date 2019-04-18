@@ -11,7 +11,7 @@ public class Board { // utworzenie planszy do gry, z polami
     private ArrayList<Piece> pieces = new ArrayList<Piece>(); // Jak na razie jedyna arraylista
 
     private final int white = 1;
-    private final int black = 2;
+    private final int black = -1;
 
     public Board() {    // utworzenie planszy szachowej, ustawienie początkowe
 
