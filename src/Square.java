@@ -67,7 +67,7 @@ public class Square{ // definicja pojedynczego kafelka, będzie potrzeba np. do 
     public String toString(){       // metoda z poprzedniego projektu pokerowego
 
         if(piece == null){
-            return " ";
+            return "-";
         }
         return piece.toString();    // poprawiona metoda wyświetlania wzięta od Cecylii
     }
