@@ -19,4 +19,9 @@ public class Updates {
 
     // Some updates
     // Na razie musze iść sprzątać na święta więc odpuszczam programowanie
+
+ //// to ja rozkminilem ta ich klase possition i calkiem fajnie dziala
+    /// ten kod na sprawdzanie czy mozna ruch polega na tym ze sprawdzaja sb czy jest roznica rzedu o 1, czy jest inny kolor itd..
+    /// musimy sie zastanowic czy dmyslimy nad listami czy przechodzimy na hash code.
+    /// przepraszam ze tak malo ale staram sie ale pisalem straszne farmazony ktore nie dzialaly :(
 }

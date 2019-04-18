@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Game {
     // chwilowo tymczasowy main, wrzucam sobie różne rzeczy, aby sprawdzić czy funkcjonalności działają :)
-    public static void main(String[] args) {
+       public static void main(String[] args) {
 
        /* Scanner which_color = new Scanner(System.in);
         System.out.println("White(1) or Black(2)");
@@ -14,7 +14,7 @@ public class Game {
             for (int column = 0; column < board.getWidth(); column++) {
                 System.out.print(board.getSquare(column,row));
             }
-             System.out.println();
+            System.out.println();
         }
         System.out.println();   // odtad w dół psrawdzam poprawne wyswietlenie pionków w arrayliscie
         System.out.println(board.getPieces());

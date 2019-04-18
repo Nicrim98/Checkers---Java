@@ -6,6 +6,7 @@ public class Square{ // definicja pojedynczego kafelka, będzie potrzeba np. do 
     private int what_square = 0;
 
     private Piece piece;
+    private Possition possition;
 
     public Square(int column, int row) {
         this.column = column;
@@ -73,6 +74,10 @@ public class Square{ // definicja pojedynczego kafelka, będzie potrzeba np. do 
 
     }
 
+
+    public Possition getPossition(){
+        return possition;
+    }
 
 }
 

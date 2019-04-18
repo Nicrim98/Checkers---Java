@@ -7,10 +7,17 @@ public class Pawn extends Piece { // to była klasa bishop, zostawiłem ją bo w
     private int color;
 
     public Pawn(Square square, int color) {
-        this.color = color; // zastanowić się czy nie powinno tu byćużycie super zamiast this
+        this.color = color;
         this.square = square;
     }
 
+    //@Override // nadpisujemy klase may_i_move z piece
+//    public boolean may_i_move(Square square, Square wanted_square) { // bishop metoda + metoda na zbicia
+//        Possition possition = this.square.getPossition();
+//
+//        if(possition.difference_rows())
+
+// tu ja cos kminie ot nich z ta klasa possition
 
     @Override // nadpisujemy klase may_i_move z piece
     public Move may_i_move(Square square) {

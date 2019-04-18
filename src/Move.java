@@ -13,6 +13,8 @@ public class Move {
 //        }
 //
 //        char sep = s.charAt(2);
+ /// Metoda charAt zwraca znak znajdujący się pod wskazanym indeksem. W przypadku przekroczenia zakresu indeksu wyrzuci wyjątek: StringIndexOutOfBoundsException.
+/// nie mam pojecia czemu od 2 :(
 //    }
 //    // nie wiem o co tu chodzi to na razie zostawiam nie dokończone
 
