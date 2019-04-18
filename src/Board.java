@@ -28,13 +28,13 @@ public class Board { // utworzenie planszy do gry, z polami
             for(int column = 1; column < 8;column += 2){
                 if (row % 2 == 0) {
                     this.squares[column][row] = new Square("W");
-                    pieces.add(new Pawn(squares[column][row], white));   // dodajemy pionka do listy czyli na koniec
+                    pieces.add(new Pawn(this,squares[column][row], white));   // dodajemy pionka do listy czyli na koniec
                     Collections.swap(pieces, (row*8)+column, 64);   // zamieniamy miejscami z danym nullem
                     pieces.remove(64);                  // usuwamy nulla na końcu żeby wciąż mieć tylko obiekty od 0-63
                 }
                 else {
                     this.squares[column-1][row] = new Square("W");
-                    pieces.add(new Pawn(squares[column-1][row], white));
+                    pieces.add(new Pawn(this,squares[column-1][row], white));
                     Collections.swap(pieces, (row*8)+(column-1), 64);
                     pieces.remove(64);
                 }
@@ -45,13 +45,13 @@ public class Board { // utworzenie planszy do gry, z polami
             for(int column = 1; column < width; column += 2) {
                 if (row % 2 == 1) {
                     this.squares[column-1][row] = new Square("B");
-                    pieces.add(new Pawn(squares[column-1][row], black));
+                    pieces.add(new Pawn(this,squares[column-1][row], black));
                     Collections.swap(pieces, (row*8)+(column-1), 64);
                     pieces.remove(64);
                 }
                 else {
                     this.squares[column][row] = new Square("B");
-                    pieces.add(new Pawn(squares[column][row], black));
+                    pieces.add(new Pawn(this, squares[column][row], black));
                     Collections.swap(pieces, (row*8)+column, 64);
                     pieces.remove(64);
                 }
@@ -62,6 +62,12 @@ public class Board { // utworzenie planszy do gry, z polami
     public Square getSquare(int column, int row){   // zapewnia dostep do danego pola
         return squares[column][row];
     }
+
+    public Square getSquare( Possition possition){   // zapewnia dostep do danego pola
+        return squares[possition.get_column()][possition.get_row()];
+    }
+
+
 
     public int getWidth() {
         return width;

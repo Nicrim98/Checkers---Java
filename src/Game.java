@@ -1,30 +1,26 @@
 import java.util.Scanner;
 
 public class Game {
-    // chwilowo tymczasowy main, wrzucam sobie różne rzeczy, aby sprawdzić czy funkcjonalności działają :)
-       public static void main(String[] args) {
 
-       /* Scanner which_color = new Scanner(System.in);
-        System.out.println("White(1) or Black(2)");
-        int color = Integer.parseInt(which_color.nextLine());*/
-
+    public static void main (){
         Board board = new Board();
+        Player player1 = new Player("Marcin", 12, 1);
+        Player player2 = new Player("Kuba", 12, -1);
 
-        for (int row = 0; row < board.getHeight(); row++) { // sprawdzenie poprawności wyświetlania szachownicy
-            for (int column = 0; column < board.getWidth(); column++) {
-                System.out.print(board.getSquare(column,row));
-            }
-            System.out.println();
-        }
-        System.out.println();   // odtad w dół psrawdzam poprawne wyswietlenie pionków w arrayliscie
-        System.out.println(board.getPieces());
-        System.out.println();
+        Scanner sc = new Scanner(System.in);
+        Game game = new Game
 
-        for (int row = 0; row < board.getHeight(); row++) { // sprawdzenie poprawności wyświetlania szachownicy
-            for (int column = 0; column < board.getWidth(); column++) {
-                System.out.print(board.getPieces((row*8) + column) + " ");
-            }
-            System.out.println();
+        while(!winner){
+            System.out.println(game);
+            int r1 = sc.nextInt();
+            int c1 = sc.nextInt();
+            int r2 = sc.nextInt();
+            int c2 = sc.nextInt();
+
+
         }
+
+
     }
+
 }

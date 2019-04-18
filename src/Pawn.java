@@ -7,6 +7,8 @@ public class Pawn extends Piece { // to była klasa bishop, zostawiłem ją bo w
 
     private int color;
 
+
+
     public Pawn(Board board,  Square square, int color) {
         this.color = color;
         this.square = square;
@@ -71,14 +73,14 @@ public class Pawn extends Piece { // to była klasa bishop, zostawiłem ją bo w
         return false;
     }
 
-    public Square poleZbijane(Square squareto) throws NoPieceTojumpover {
+    public Square square_jumped(Square squareto) throws NoPieceTojumpover {
         Possition possition = this.square.getPossition();
         for(int i = -1; i <= 1; i+=2){
             for(int j = -1; j <=1; j+=2){
                 if(possition.difference_rows(squareto.getPossition()) == 2 * i && possition.difference_columns(squareto.getPossition())==2*j){
-                    Square poleZbijane = squareto.getPossition(new Possition(square.getRow() + i, square.getColumn() + j));
-                    if(poleZbijane.getFigura() == null) throw new BrakFiguryDoZbiciaException();
-                    if(poleZbijane.getFigura().getKolor() == this.getKolor().opposite()) return poleZbijane;
+                    Square square_jumped = this.board.getSquare(new Possition(square.getRow() + i, square.getColumn() + j));
+                    if(square_jumped.getPiece() == null) throw new NoPieceTojumpover();
+                    if(square_jumped.getPiece().getColor() == this.getColor()*(-1)) return square_jumped;
                 }
             }
         }

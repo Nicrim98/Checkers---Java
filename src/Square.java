@@ -5,6 +5,7 @@ public class Square{ // definicja pojedynczego kafelka, będzie potrzeba np. do 
     private String piece_type;
     private int what_square = 0;
 
+
     private Piece piece = null;
     private Possition possition;
 
