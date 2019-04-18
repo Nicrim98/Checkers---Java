@@ -5,7 +5,7 @@ public class Square{ // definicja pojedynczego kafelka, będzie potrzeba np. do 
     private String piece_type;
     private int what_square = 0;
 
-    private Piece piece;
+    private Piece piece = null;
     private Possition possition;
 
     public Square(int column, int row) {
@@ -63,15 +63,13 @@ public class Square{ // definicja pojedynczego kafelka, będzie potrzeba np. do 
         return row;
     }
 
+    @Override
     public String toString(){       // metoda z poprzedniego projektu pokerowego
 
-        String squareString;
-
-        String[] list_of_possible_squares = { "-", "W", "B", "WQ", "BQ"};
-
-        squareString = list_of_possible_squares[what_square] + " ";
-        return squareString ;
-
+        if(piece == null){
+            return " ";
+        }
+        return piece.toString();    // poprawiona metoda wyświetlania wzięta od Cecylii
     }
 
 

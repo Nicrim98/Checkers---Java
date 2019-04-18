@@ -40,6 +40,4 @@ public class Possition {
             return new Possition(this.row+row, this.column+column);
         }
 
-
-
     }
