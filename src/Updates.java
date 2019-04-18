@@ -16,4 +16,7 @@ public class Updates {
     // Zacząłem się bawić po trochu mechaniką ruchu znów w oparciu  o mdavid, ale jeszcze nie ogarniam do końca
     // Mamy też jedną klasę typu abstract tj. Piece, fajnie będzie chyba o niej pogadać na prezentacji
     // Na razie lecę w kime także do usłyszenia :)
+
+    // Some updates
+    // Na razie musze iść sprzątać na święta więc odpuszczam programowanie
 }

@@ -2,7 +2,7 @@ public abstract class Piece { // pomysł na zrobienie wstepnie szkieletu figury,
 
     private int color;
 
-    private Square square;
+    protected Square square;
 
     // domyslny konstruktor do piece, jego brak powoduje blad konstruktora w klasie Pawn
     public Piece(){
@@ -14,8 +14,9 @@ public abstract class Piece { // pomysł na zrobienie wstepnie szkieletu figury,
         this.color = color;
     }
 
-    // Sprawdza mozliwosc ruchu podając obecną pozycje DOPISAC, wejsc na klase STEP
-    public boolean may_i_move(Square square) {
+    // Sprawdza mozliwosc ruchu podając square na który chcemy się przemieścić
+    // Zwraca true albo false
+    public abstract Move may_i_move(Square square);
 
 //        if(wanted_column == curr_column ){
 //            return true;
@@ -25,8 +26,6 @@ public abstract class Piece { // pomysł na zrobienie wstepnie szkieletu figury,
 //        }
 //
 //
-        return true;
-    }
 
     public void make_move(Square square) {
         this.square.removePiece();

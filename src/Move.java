@@ -40,4 +40,24 @@ public class Move {
         }
         return true;
     }
+
+    // funkcja equals zwróci true jeśli pola from, to i taken są true
+    @Override
+    public boolean equals(Object object){
+        if(object instanceof Move){
+            Move move = (Move)object;
+
+            if(!checkMove(this.square_from, move.square_from)){
+                return false;
+            }
+            if(!checkMove(this.square_to, move.square_to)){
+                return false;
+            }
+            if(!checkMove(this.square_taken, move.square_taken)){
+                return false;
+            }
+            return true;
+        }
+        return false;
+    }
 }

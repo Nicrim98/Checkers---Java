@@ -1,4 +1,4 @@
-public class Square { // definicja pojedynczego kafelka, będzie potrzeba np. do sprawdzania czy figura stacjonuje na danym polu ;)
+public class Square{ // definicja pojedynczego kafelka, będzie potrzeba np. do sprawdzania czy figura stacjonuje na danym polu ;)
 
     private int column;
     private int row;
