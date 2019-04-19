@@ -35,6 +35,18 @@ public class Gameplay {
         board.getSquare(p_from).removePiece();
 
     }
+
+    public boolean validMove(Possition p_from, Possition p_to){
+        if(this.board.getSquare(p_from) == null || this.board.getSquare(p_from).getPiece() == null ){
+            return false;
+        }
+        if(this.board.getSquare(p_from).getPiece().getColor() != activeplayer){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
 //    public void make_move(Possition p_from, Possition p_to) {
 //        if(this.board.getSquare(p_from) == null || this.board.getSquare(p_from).getPiece() == null );
 //        if(this.board.getSquare(p_from).getPiece().getColor() != activeplayer) throw new WybranaFiguraZlegoGraczaException();
