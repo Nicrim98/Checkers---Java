@@ -9,7 +9,7 @@ public class Gameplay {
     private Board board;
     private final int white = 1;
     private final int black = -1;
-    private int activeplayer = 1;
+    private int activeplayer = white;
 
     public void getBoard(Board board) {
         this.board = board;
@@ -28,25 +28,29 @@ public class Gameplay {
 
     }
     public void make_move(Possition p_from, Possition p_to) {
-
-        board.getSquare(p_to).putPiece(board.getSquare(p_from).getPiece());
-        board.getSquare(p_from).removePiece();
-
-
+        if(validMove(p_from, p_to)) {
+            board.getSquare(p_to).putPiece(board.getSquare(p_from).getPiece());
+            board.getSquare(p_from).removePiece();
+            activeplayer = -1*activeplayer;
+        }
     }
 
     public boolean validMove(Possition p_from, Possition p_to){
         if(this.board.getSquare(p_from) == null || this.board.getSquare(p_from).getPiece() == null ){
             return false;
         }
-        if(this.board.getSquare(p_from).getPiece().getColor() != activeplayer){
-            return false;
-        }
-        else{
+        if(this.board.getSquare(p_from).getPiece().getColor() == activeplayer) {
             return true;
         }
+        else{
+            return false;
+        }
     }
-//    public void make_move(Possition p_from, Possition p_to) {
+
+    public int getActiveplayer() {
+        return activeplayer;
+    }
+    //    public void make_move(Possition p_from, Possition p_to) {
 //        if(this.board.getSquare(p_from) == null || this.board.getSquare(p_from).getPiece() == null );
 //        if(this.board.getSquare(p_from).getPiece().getColor() != activeplayer) throw new WybranaFiguraZlegoGraczaException();
 //        if(this.board.zrobRuchOrazCzyByloBicie(board.getSquare(p_from), board.getSquare(p_to)))this.gracze.get(this.kolorObecnegoGracza).zmniejszLiczbeFigur();

@@ -23,6 +23,12 @@ public class Game {
         while(!isWinner()) { // program działa dopóki nie ma zwycięzcy ;)
 
             gameplay.getBoard(board);
+            if(gameplay.getActiveplayer() == white){
+                System.out.println("Kolej gracza białego");
+            }
+            if(gameplay.getActiveplayer() == black){
+                System.out.println("Kolej gracza czarnego");
+            }
             System.out.println("Podaj pozycje pionka, którego przesuwasz (kolumna (enter) rząd");
             int column_from = sc.nextInt();
             int row_from = sc.nextInt();

@@ -18,14 +18,14 @@ public class Queen extends Piece {
     }
 
     @Override
-    public Move may_i_move(Square square){
+    public boolean may_i_move(Square square){
         if(square == null || square.equals(this.square)){
-            return null;
+            return false;
         }
 
         // wprowadzić algorytm przesuwania
 
-        return null;
+        return true;
     }
 //    public boolean may_i_move(){
 ////----------------zachowania jak wieza---------------
