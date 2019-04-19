@@ -29,10 +29,10 @@ public class Game {
             if(gameplay.getActiveplayer() == black){
                 System.out.println("Kolej gracza czarnego");
             }
-            System.out.println("Podaj pozycje pionka, którego przesuwasz (kolumna (enter) rząd");
+            System.out.println("Podaj pozycje pionka, którego przesuwasz (kolumna (enter) rząd (enter)");
             int column_from = sc.nextInt();
             int row_from = sc.nextInt();
-            System.out.println("Podaj pozycje na którą chcesz go przesunąć (kolumna (enter) rząd");
+            System.out.println("Podaj pozycje na którą chcesz go przesunąć (kolumna (enter) rząd (enter) ");
             int column_to = sc.nextInt();
             int row_to = sc.nextInt();
             gameplay.make_move(new Possition(row_from, column_from), new Possition(row_to, column_to));

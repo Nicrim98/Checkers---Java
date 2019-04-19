@@ -33,38 +33,9 @@ public class Pawn extends Piece { // to była klasa bishop, zostawiłem ją bo w
             if(!can_move_freely(square)){
                 return false;
             }
-//            if(!square_jumped(square)){
-//                return false
-//            } // trzeba tutaj obsłużyc wyjątek aby działało
-
-
-
-
-//        ///   for(int i=1; i<8; i++){ // tu ta 8 sprawi w pewnych przypadkach out of border naszej szachownicy wiec trzea to zedytowac potem
-//        if (wanted_column == curr_column + 1 && wanted_row == curr_row + 1) {
-//            return true;
-//            //  break;
-//        }
-//        if (wanted_column == curr_column + 1 && wanted_row == curr_row - 1) {
-//            return true;
-//            //break;
-//        }
-//
-//        if (wanted_column == curr_column - 1 && wanted_row == curr_row - 1) {
-//            return true;
-//            //  break;
-//        }
-//
-//        if (wanted_column == curr_column - 1 && wanted_row == curr_row + 1) {
-//            return true;
-//            //  break;
-//        } else return false;
-//        //    break;
-//
-//    }
-//
         return true;
     }
+
 
 
 

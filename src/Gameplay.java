@@ -32,6 +32,8 @@ public class Gameplay {
             board.getSquare(p_to).putPiece(board.getSquare(p_from).getPiece());
             board.getSquare(p_from).removePiece();
             activeplayer = -1*activeplayer;
+//            if(activeplayer == white) activeplayer = black;
+//            else if(activeplayer == black) activeplayer = white;
         }
     }
 
@@ -39,12 +41,13 @@ public class Gameplay {
         if(this.board.getSquare(p_from) == null || this.board.getSquare(p_from).getPiece() == null ){
             return false;
         }
-        if(this.board.getSquare(p_from).getPiece().getColor() == activeplayer) {
-            return true;
-        }
-        else{
-            return false;
-        }
+//        if(this.board.getSquare(p_from).getPiece().getColor() == activeplayer) {
+//           return true;
+//       }
+//        else{
+//            return false;
+//       } // ale tutaj w valid mow sprawdzamy tylko ten obiekt p_from bo p_to sprawdzamy w fukcjni may_i_move, wiec moze usunac p_to?
+       return  true;
     }
 
     public int getActiveplayer() {
