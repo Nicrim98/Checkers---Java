@@ -21,9 +21,15 @@ public class Game {
         Gameplay gameplay = new Gameplay();
 
         while(!isWinner()) { // program działa dopóki nie ma zwycięzcy ;)
+
             gameplay.getBoard(board);
-            gameplay.make_move();
-            gameplay.getBoard(board);
+            System.out.println("Podaj pozycje pionka, którego przesuwasz (kolumna (enter) rząd");
+            int column_from = sc.nextInt();
+            int row_from = sc.nextInt();
+            System.out.println("Podaj pozycje na którą chcesz go przesunąć (kolumna (enter) rząd");
+            int column_to = sc.nextInt();
+            int row_to = sc.nextInt();
+            gameplay.make_move(new Possition(row_from, column_from), new Possition(row_to, column_to));
         }
     }
     public static boolean isWinner(){

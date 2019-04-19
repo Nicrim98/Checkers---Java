@@ -27,12 +27,11 @@ public class Gameplay {
 //        this.player2 = new Player("player2", 12, black);
 
     }
-    public void make_move() {
-        //r=2, c=7,     r=3,c=6
-        Possition p_from = new Possition(2,7);
-        Possition p_to = new Possition(3,6);
+    public void make_move(Possition p_from, Possition p_to) {
+
         board.getSquare(p_to).putPiece(board.getSquare(p_from).getPiece());
         board.getSquare(p_from).removePiece();
+
 
     }
 
