@@ -36,8 +36,8 @@ public class Possition {
 //            return Objects.hash(row, column);
 //        }
 
-        public Possition add(int row, int column){
-            return new Possition(this.row+row, this.column+column);
-        }
+//        public Possition add(int row, int column){
+//            return new Possition(this.row+row, this.column+column);
+//        }     // Z tego chyba nigdzie nie korzystamy także pewnie będzie można wyrzucić
 
     }

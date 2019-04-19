@@ -6,11 +6,14 @@ public class Game {
         private static final int white = 1;
         private static final int black = -1;
 
+        private static int winner;
+
         private static Player player_white;
         private static Player player_black;
+        private static Board board;
 
     public static void main(String[] args){
-        Board board = new Board();
+        board = new Board();
         player_white = new Player("Marcin", board,12, white);
         player_black = new Player("Kuba", board,12, black);
 
@@ -26,13 +29,22 @@ public class Game {
     public static boolean isWinner(){
 
         if(player_white.getNum_pieces() == 0){
+            winner = black;
             return true;
         }
         if(player_black.getNum_pieces() == 0){
+            winner = white;
             return true;
         }
-        if(!this.plansza.czyGraczMozeSieRuszyc(this.kolorObecnegoGracza))return this.kolorObecnegoGracza.opposite();
-        // chyba trzeba dopisaćtutaj jedną metodę
+        if(player_white.can_player_move(player_white) && !player_black.can_player_move(player_black)){
+            winner = white;
+            return true;
+        }
+        if(!player_white.can_player_move(player_white) && player_black.can_player_move(player_black)){
+            winner = black;
+            return true;
+        }
+
         return false;
     }
 

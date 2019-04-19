@@ -17,7 +17,7 @@ public class Pawn extends Piece { // to była klasa bishop, zostawiłem ją bo w
 
     }
 
-    //@Override // nadpisujemy klase may_i_move z piece
+    //@Override // nadpisujemy klase   z piece
 //    public boolean may_i_move(Square square, Square wanted_square) { // bishop metoda + metoda na zbicia
 //        Possition possition = this.square.getPossition();
 //
@@ -26,14 +26,16 @@ public class Pawn extends Piece { // to była klasa bishop, zostawiłem ją bo w
 // tu ja cos kminie ot nich z ta klasa possition
 
     @Override // nadpisujemy klase may_i_move z piece
-    public Move may_i_move(Square square) {
+    public boolean may_i_move(Square square) {
             if (square == null || square.equals(this.square)){
-                return null;
-
-
-
+                return false;
             }
-
+            if(!can_move_freely(square)){
+                return false;
+            }
+//            if(!square_jumped(square)){
+//                return false
+//            } // trzeba tutaj obsłużyc wyjątek aby działało
 
 
 
@@ -61,7 +63,7 @@ public class Pawn extends Piece { // to była klasa bishop, zostawiłem ją bo w
 //
 //    }
 //
-        return null;
+        return true;
     }
 
 

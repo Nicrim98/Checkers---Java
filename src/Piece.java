@@ -16,16 +16,7 @@ public abstract class Piece { // pomysł na zrobienie wstepnie szkieletu figury,
 
     // Sprawdza mozliwosc ruchu podając square na który chcemy się przemieścić
     // Zwraca true albo false
-    public abstract Move may_i_move(Square square);
-
-//        if(wanted_column == curr_column ){
-//            return true;
-//        }
-//        else if(wanted_row == curr_row){
-//            return true;
-//        }
-//
-//
+    public abstract boolean may_i_move(Square square);
 
     public void make_move(Square square) {
         this.square.removePiece();

@@ -29,7 +29,7 @@ public class Player {
             for (int row = 0; row < board.getHeight(); row++) {
                 for (int column = 0; column < board.getWidth(); column++) {
                     if (board.getSquare(new Possition(row, column)).getPiece() != null && board.getSquare(new Possition(row, column)).getPiece().getColor() == player.getColor()) {
-                       board.getSquare(new Possition(row, column)).getPiece().may_i_move();
+                      // board.getSquare(new Possition(row, column)).getPiece().may_i_move(board.getSquare(new Possition(row, column)));
                         //sprawdzenie ruchu pionka
                     }
                 }
