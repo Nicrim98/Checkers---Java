@@ -10,7 +10,7 @@ public class Queen extends Piece {
 //    private int wanted_column=1;
 
     public Queen(Square square, int color){
-        super(square,color);
+        //super(square,color);
     }
 
     public Queen(Queen newQueen, Square square){

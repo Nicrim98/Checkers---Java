@@ -1,4 +1,4 @@
-public abstract class Piece { // pomysł na zrobienie wstepnie szkieletu figury, jak w przypadku pokera była karta
+public abstract class Piece {
 
     private int color;
 
@@ -9,7 +9,7 @@ public abstract class Piece { // pomysł na zrobienie wstepnie szkieletu figury,
     }
 
     //Tworzy nowego pionka
-    public Piece(Square square, int color) {
+    public Piece(Square square) {
         this.square = square;
         this.color = color;
     }

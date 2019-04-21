@@ -3,7 +3,7 @@ import java.util.Collections;
 
 public class Board { // utworzenie planszy do gry, z polami
 
-    private final int width = 8; /// w sumie tablica jest kwadratowa wiec potrzeba jednej zmiennej
+    private final int width = 8;
     private final int height = 8;
 
     private Square[][] squares = new Square[width][height];
@@ -55,11 +55,9 @@ public class Board { // utworzenie planszy do gry, z polami
         return squares[column][row];
     }
 
-    public Square getSquare( Possition possition){   // zapewnia dostep do danego pola
+    public Square getSquare(Possition possition){   // zapewnia dostep do danego pola
         return squares[possition.get_column()][possition.get_row()];
     }
-
-
 
     public int getWidth() {
         return width;

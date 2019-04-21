@@ -78,7 +78,8 @@ public class Square{ // definicja pojedynczego kafelka, będzie potrzeba np. do 
     }                               // choć jeszcze do końca nie działa, możesz sobie podpatrzeću Cecylii, że tam jeszcze są odwołania w figurze do rodzaju figury
                                     // na razie nie wiem jeszcze jak to załatwić
 
-    public Possition getPossition(){
+    public Possition getPossition(Square square){
+        Possition possition = new Possition(square.getRow(),square.getColumn());
         return possition;
     }
 

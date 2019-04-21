@@ -26,16 +26,21 @@ public class Player {
         }
 
         public boolean can_player_move(Player player) {
+            boolean isPossible = false; // zmienna pomocnicza do sprawdzania możliwości ruchu
             for (int row = 0; row < board.getHeight(); row++) {
                 for (int column = 0; column < board.getWidth(); column++) {
+                    // Sprawdzenie wszysttkich możliwości gifur gracza
                     if (board.getSquare(new Possition(row, column)).getPiece() != null && board.getSquare(new Possition(row, column)).getPiece().getColor() == player.getColor()) {
-                      // board.getSquare(new Possition(row, column)).getPiece().may_i_move(board.getSquare(new Possition(row, column)));
-                        //sprawdzenie ruchu pionka
+                        // Dodatkowe sprawdzenie czy mogą się one gdzieś ruszyc
+                        if (board.getSquare(new Possition(row, column)).getPiece().may_i_move(board.getSquare(new Possition(row, column)))) {
+                            isPossible = true;
+                        }
                     }
                 }
             }
-            return false;
+            return isPossible;
         }
+
         public int getColor() {
             return color;
         }

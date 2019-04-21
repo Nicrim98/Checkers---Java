@@ -20,6 +20,7 @@ public class Possition {
             return possition.row - this.row;
         }
         public int difference_columns(Possition possition){
+
             return possition.column - this.column;
         }
 

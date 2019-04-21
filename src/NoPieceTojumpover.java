@@ -1,2 +1,2 @@
-public class NoPieceTojumpover extends Exception {
+public class NoPieceTojumpover extends InvalidMoveException {
 }
