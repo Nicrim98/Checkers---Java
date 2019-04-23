@@ -27,13 +27,13 @@ public class Gameplay {
 
     public void make_move(Possition p_from, Possition p_to) {
         if(validMove(p_from)) {
-          //  if(board.getSquare(p_from).getPiece().may_i_move(board.getSquare(p_from))) {
+           //   if(board.getSquare(p_from).getPiece().may_i_move(board.getSquare(p_from))) {
                 board.getSquare(p_to).putPiece(board.getSquare(p_from).getPiece());
                 board.getSquare(p_from).removePiece();
                 activeplayer = -1 * activeplayer;
-           // } // funkcja sprawdzająca may_i_move klasy pawn nie działa jak powinna
+              } // funkcja sprawdzająca may_i_move klasy pawn nie działa jak powinna
             //      prawdopodobine mamy problemy ze sprawdzaniem metod w środku may_i_move czyli can_move_freely() i can_square_jumped()
-        }
+        //}
     }
 
     public boolean validMove(Possition p_from){

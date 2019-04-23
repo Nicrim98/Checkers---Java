@@ -28,10 +28,12 @@ public class Board { // utworzenie planszy do gry, z polami
             for(int column = 1; column < 8;column += 2){
                 if (row % 2 == 0) {
                     this.squares[column][row] = new Square("W");
+                    this.squares[column][row].removePiece();
                     this.squares[column][row].putPiece(new Pawn(this,squares[column][row],white));
                 }
                 else {
                     this.squares[column-1][row] = new Square("W");
+                    this.squares[column][row].removePiece();
                     this.squares[column-1][row].putPiece(new Pawn(this,squares[column-1][row],white));
                 }
             }
@@ -41,10 +43,12 @@ public class Board { // utworzenie planszy do gry, z polami
             for(int column = 1; column < width; column += 2) {
                 if (row % 2 == 1) {
                     this.squares[column-1][row] = new Square("B");
+                    this.squares[column][row].removePiece();
                     this.squares[column-1][row].putPiece(new Pawn(this,squares[column-1][row],black));
                 }
                 else {
                     this.squares[column][row] = new Square("B");
+                    this.squares[column][row].removePiece();
                     this.squares[column][row].putPiece(new Pawn(this,squares[column][row],black));
                 }
             }

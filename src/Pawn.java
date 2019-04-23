@@ -1,21 +1,7 @@
 public class Pawn extends Piece {
 
-    private Square square;
-    private Board board;
-
-    private int pawn_color = 0;
-    private int color_temp;
-
-
     public Pawn(Board board,  Square square, int color) {
-        this.pawn_color = color;
-        this.square = square;
-        this.board = board;
-    }
-
-    @Override
-    public int getColor() {
-        return pawn_color;
+        super(board, square, color);
     }
 
     @Override // nadpisujemy klase may_i_move z piece
@@ -36,11 +22,13 @@ public class Pawn extends Piece {
 
     public boolean can_move_freely(Square square){
 
-        Possition possition = this.square.getPossition(this.square);
-
-        if(possition.difference_rows(square.getPossition(square)) == board.getSquare(this.square.getPossition(this.square)).getPiece().getColor() && Math.abs(possition.difference_columns(square.getPossition(square))) == 1){
-            return true;
-        }
+      //    Possition possition = this.square.getPossition(this.square);
+//          //  System.out.println(this.board.getSquare(possition).getPiece().getColor());
+//            // Przy tym jest błąd typu Null pointer- this.square.getPossition(this.square)).getPiece().getColor());
+//            // Poza tym possition.difference_rows(square.getPossition(square)) zwraca '0', a chyba powinno zwrócić '1'
+//            if(possition.difference_rows(square.getPossition(square)) == 1 && Math.abs(possition.difference_columns(square.getPossition(square))) == 1){
+//                return true;
+//            }
         return false;
     }
 
@@ -59,21 +47,4 @@ public class Pawn extends Piece {
         }
         return false;
     }
-
-     public String toString() {
-
-          String squareString;
-          if(pawn_color == 1){
-              color_temp = 1;
-          }
-          if(pawn_color == -1){
-              color_temp = 2;
-          }
-
-          String[] list_of_pieces = {" ", "W", "B"};
-
-          squareString = list_of_pieces[color_temp];
-          return squareString;
-
-     }
 }

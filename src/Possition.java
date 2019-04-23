@@ -17,11 +17,11 @@ public class Possition {
         }
 
         public int difference_rows(Possition possition){
-            return possition.row - this.row;
+            return possition.get_row() - this.row;
         }
         public int difference_columns(Possition possition){
 
-            return possition.column - this.column;
+            return possition.get_column() - this.column;
         }
 
 

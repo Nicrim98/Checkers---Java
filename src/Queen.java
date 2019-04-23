@@ -1,12 +1,8 @@
 public class Queen extends Piece {
 
 
-    public Queen(Square square, int color){
-        //super(square,color);
-    }
-
-    public Queen(Queen newQueen, Square square){
-        this(square, newQueen.getColor());
+    public Queen(Board board, Square square, int color){
+        super(board,square,color);
     }
 
     @Override
@@ -17,6 +13,11 @@ public class Queen extends Piece {
 
         // wprowadzić algorytm przesuwania
 
+        return true;
+    }
+
+    @Override
+    public boolean can_move_freely(Square square){
         return true;
     }
 }

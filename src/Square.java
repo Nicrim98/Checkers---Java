@@ -7,7 +7,7 @@ public class Square{ // definicja pojedynczego kafelka, będzie potrzeba np. do 
 
 
     private Piece piece = null;
-    private Possition possition;
+  //  private Possition possition;
 
     public Square(int column, int row) {
         this.column = column;
